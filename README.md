@@ -192,4 +192,64 @@ Regulated industry? Good — this section is for you. Ultrapass is engineered fo
 ### Standards conformance
 
 | Domain | Standards |
-|-...
+|---|---|
+| Authentication | FIDO2 · WebAuthn · CTAP2 |
+| Assurance levels | NIST SP 800-63 (IAL / AAL alignment) |
+| Biometric template protection | ISO/IEC 24745 · ISO/IEC 30136 |
+| Presentation attack detection (liveness) | ISO/IEC 30107-3 |
+| Verifiable credentials | W3C VC Data Model 1.1 · W3C DIDs · OID4VCI · OID4VP · ISO/IEC 18013-5 (mDL) |
+| Cryptographic module | FIPS 140-3 (CMVP #4985) |
+
+### Built for regulated workflows
+
+- **Healthcare (HIPAA).** On-device matching and data minimization mean little to no PHI or biometric data leaves the user's device, supporting HIPAA-aligned deployments. Ultrapass is software you run inside your compliance boundary — it supports your HIPAA program; it doesn't replace it.
+- **Financial services.** Phishing-resistant step-up and identity-assured onboarding for KYC-driven and high-value-transaction flows.
+- **Government & public sector.** NIST SP 800-63 IAL/AAL alignment and FIPS 140-3 cryptography for high-assurance access.
+- **Biometric privacy law.** Designed around data-minimization principles relevant to GDPR, CCPA/CPRA, and biometric statutes such as BIPA — raw biometrics are not collected or retained server-side.
+
+### Data-handling posture
+
+- **On-device matching.** Biometric inference runs on the user's device; protected, irreversible templates conform to ISO/IEC 24745 and 30136. Raw images and biometrics do not leave the device.
+- **Result, not evidence.** Relying parties receive verification outcomes — e.g., a boolean over/under-threshold for age — not the underlying biometric data.
+- **Multi-modal, camera-based.** Face, voice, and palm. No fingerprint hardware required.
+- **Inference-only.** The biometric matcher contains no LLMs and no generative AI in the authentication path — by design.
+
+> Compliance statements describe Private Identity's platform and certifications. Your deployment's posture depends on how you integrate and operate it. Nothing in this section is legal advice.
+
+---
+
+## License
+
+> Short version: **read it, fork it, modify it to fit your organization — just don't use it to build something that competes with Private Identity.**
+
+The Launcher SDKs are **source-available** under a non-compete license. The wording matters: a true "open source" license (per the Open Source Definition) cannot restrict competing use, so a license that says "use it freely, but don't compete with us" is *source-available*, not open source.
+
+The launchers are licensed under **PolyForm Shield 1.0.0**, which grants broad rights to use, modify, and distribute — including commercially — with one limitation: you may not use the software to offer a product or service that competes with Private Identity's products or services. See the [`LICENSE`](LICENSE) file in each repository for the controlling terms.
+
+<!-- CONFIRM: final license choice and add a LICENSE file to each repo. Alternatives discussed with the team: FSL-1.1-Apache-2.0 (auto-converts to Apache-2.0 after 2 years) and BUSL-1.1. Run the final wording past counsel. -->
+
+---
+
+## Support
+
+- **Product:** [ultrapass.com](https://ultrapass.com)
+- **Email:** [info@ultrapass.com](mailto:info@ultrapass.com)
+- **Company:** [privateid.com](https://privateid.com)
+
+Found a security issue? Please report it privately to the email above rather than opening a public issue.
+
+---
+
+## About Private Identity
+
+Ultrapass is developed by **Private Identity** (**PrivateID**), a privacy-preserving identity company building high-assurance authentication, verification, and trust infrastructure for modern applications. Its biometric matching is powered by Private Identity's **CryptoNets™** technology — on-device, template-protected, and irreversible.
+
+---
+
+## Trademarks & notices
+
+**Ultrapass®**, **PrivateID®**, and **Private Identity®** are registered trademarks of Private Identity LLC. **CryptoNets™** is a trademark of Private Identity LLC. Patent Pending.
+
+Ultrapass is **not** affiliated with, related to, or endorsed by **ultrapassid.com** / UltrapassID, which is a separate and unrelated company despite the similar name.
+
+FIDO®, FIDO2, and WebAuthn are trademarks of the FIDO Alliance. PingFederate® and Ping Identity® are trademarks of Ping Identity Corporation. All other trademarks are the property of their respective owners.
